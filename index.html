@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="bootstrap/js/jquery-3.3.1.js"> -->
+    <script src="js/head.js"></script>
+    <script src="js/footer.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/head.css">
+</head>
+<body>
+    <img src="images/erweima.jpg" id="saoma" alt="">
+    <div id="head"></div> 
+     <iframe src="1.1.html" frameborder="0" name="iframe-a" width="100%" id="test" onload="this.height=100"scrolling="no"></iframe>
+     
+    <div id="footer"></div>
+
+    <script type="text/javascript">  
+        function reinitIframe(){  
+            var iframe = document.getElementById("test");  
+            try{  
+                var bHeight = iframe.contentWindow.document.body.scrollHeight;  
+                var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;  
+                var height = Math.max(bHeight, dHeight);  
+                iframe.height =  height;  
+                console.log(height);
+            }catch (ex){}  
+        }  
+      
+        window.setInterval("reinitIframe()", 200);  
+    </script>
+    
+    <script src="bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
